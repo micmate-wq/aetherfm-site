@@ -1,6 +1,6 @@
 @font-face{font-family:"Inter Tight";src:url(../assets/fonts/InterTight-var.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#141414;--paper:#f1eee6;--y:#f6d24a;--p:#f4a6c1;--b:#94c6ec;--r:#e8432f;--mute:#6f6b63;--grey:#b5b1a7;--pad:clamp(18px,4.4vw,64px)}
+:root{--ink:#141414;--paper:#f1eee6;--y:#f6d24a;--p:#f4a6c1;--b:#94c6ec;--g:#8fd19e;--r:#e8432f;--mute:#6f6b63;--grey:#b5b1a7;--pad:clamp(18px,4.4vw,64px)}
 html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font-family:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1;overflow-x:hidden;
   background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px);background-size:40px 40px}
@@ -80,7 +80,7 @@ body.playing .i-mini{fill:var(--r)}
 .nodes-head p{margin-top:28px;line-height:1.8}
 .wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:30px 34px;padding-bottom:40px}
 .tile{position:relative;aspect-ratio:1;border-radius:50%;container-type:inline-size;transform:translateY(var(--dy)) rotate(var(--r));transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
-.tile.y{background:var(--y)}.tile.p{background:var(--p)}.tile.b{background:var(--b)}
+.tile.g{background:var(--g)}.tile.y{background:var(--y)}.tile.p{background:var(--p)}.tile.b{background:var(--b)}
 .tile.o{border:1.5px dashed var(--ink)}
 .tile > *{position:absolute;left:0;right:0;text-align:center}
 .tile .k{top:16cqw;font-size:max(8px,4cqw)}
