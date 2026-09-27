@@ -80,7 +80,7 @@ body.playing .i-mini{fill:var(--r)}
 .nodes-head p{margin-top:28px;line-height:1.8}
 .wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:30px 34px;padding-bottom:40px}
 .tile{position:relative;aspect-ratio:1;border-radius:50%;container-type:inline-size;transform:translateY(var(--dy)) rotate(var(--r));transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
-.tile.g{background:var(--g)}.tile.y{background:var(--y)}.tile.p{background:var(--p)}.tile.b{background:var(--b)}
+.tile.g{background-color:#8fd19e;background-color:var(--g)}.tile.t{background:none;border:0}.tile.y{background:var(--y)}.tile.p{background:var(--p)}.tile.b{background:var(--b)}
 .tile.o{border:1.5px dashed var(--ink)}
 .tile > *{position:absolute;left:0;right:0;text-align:center}
 .tile .k{top:16cqw;font-size:max(8px,4cqw)}

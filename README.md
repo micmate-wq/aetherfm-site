@@ -47,3 +47,6 @@ About 130 KB in total.
 2. Add a `CNAME` file containing `aetherfm.xyz`, then set Porkbun DNS: A records to GitHub's Pages IPs plus `www` CNAME `<user>.github.io`. Enable "Enforce HTTPS".
 
 The site is fully static, so any host works. Stream and status are fetched cross-origin from dontpanic.fm, which already sends CORS `*`.
+
+## Cache-busting
+GitHub Pages serves files with `cache-control: max-age=600`, so browsers can pair a new `index.html` with an old cached `site.css`. `index.html` loads CSS, JS and images with a `?v=` query (for example `css/site.css?v=20260927-3`). **Bump that value in `index.html` every time CSS, JS or images change.**
