@@ -67,7 +67,7 @@
         const t = Date.parse(s.stream_start_iso8601 || s.stream_start || '');
         streamStart = isNaN(t) ? null : t / 1000;
         setMarquee(s.title || s.server_name || `/${MOUNT} — live`);
-        el.note.textContent = s.title ? 'Now playing · from the stream' : (s.server_description || 'Live on the air');
+        el.note.textContent = s.title ? 'Now playing · from the stream' : ((s.server_description && !/^(unspecified description|unspecified name|no description)$/i.test(s.server_description.trim())) ? s.server_description : 'Live on the air');
       } else { state = 'off'; streamStart = null; }
     } catch (e) { state = 'unknown'; streamStart = null; }
     render();
