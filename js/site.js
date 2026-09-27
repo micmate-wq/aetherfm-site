@@ -120,6 +120,9 @@
     let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
     dots = Array.from({ length: n }, () => ({ x: rnd() * W, y: rnd() * H, r: [1, 1, 1.5, 1.5, 2, 2.5, 3, 4, 5.5, 7][Math.floor(rnd() * 10)],
       c: COLS[Math.floor(rnd() * COLS.length)], a: .25 + rnd() * .6, vx: (rnd() - .3) * .18, vy: (rnd() - .5) * .08 }));
+    // three speed groups, interleaved by index (dot order is random in space): 1.25x, 1.10x, 1x
+    const SPEEDS = [1.25, 1.10, 1];
+    dots.forEach((d, i) => { const k = SPEEDS[i % 3]; d.vx *= k; d.vy *= k; });
     draw();
   }
   function draw() {
