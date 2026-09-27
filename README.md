@@ -19,7 +19,7 @@ js/site.js            status polling, player, timer, marquee text, dots canvas, 
 assets/fonts/         InterTight-var.woff2 (weights 100–900)
 assets/favicon.svg    plain yellow dot (+ favicon-32.png, apple-touch-icon.png)
 assets/og.png         1200×630 share image
-assets/aether-mark-64.png  nav mark
+assets/aether-mark-128.png nav mark (shown at 48px, 40px on mobile)
 ```
 About 130 KB in total.
 
