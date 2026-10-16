@@ -1,0 +1,30 @@
+/* AETHER FM — "POSTER SHEEN" MICRO-CRAFT LAYER */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.28;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+.aether-poster-box, .station-card, .node-block, header, footer {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.07), 0 1px 3px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+@keyframes phosphorBreathe {
+  0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.2)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 7px rgba(245, 158, 11, 0.7)); }
+}
+.live-indicator, .ui-led[data-status="active"], .on-air-dot {
+  animation: phosphorBreathe 3.2s ease-in-out infinite;
+}
+.node-block:hover, .station-row:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: inset 0 1px 0 0 rgba(245, 158, 11, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.mono-telemetry, time, .date-stamp, .node-id {
+  font-feature-settings: "tnum" on, "zero" on;
+  letter-spacing: -0.015em;
+}
