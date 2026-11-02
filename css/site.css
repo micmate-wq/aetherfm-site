@@ -182,3 +182,4 @@ body.playing .i-mini{fill:var(--r)}
 @keyframes pk-drift{from{transform:scale(1.012) translateY(.6%)}to{transform:scale(1) translateY(0)}}
 @media (prefers-reduced-motion:reduce){.scr img{transition:none}.scr img.on{animation:none}}
 @media (max-width:720px){.pocket{grid-template-columns:1fr;justify-items:center}.pk-copy{width:100%}.phone{width:min(72vw,280px);transform:none}}
+.pk-soon{display:flex;align-items:center;gap:10px}.pk-soon img{border-radius:6px}
