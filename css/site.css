@@ -215,3 +215,47 @@ body.playing .i-mini{fill:var(--r)}
   .film{width:min(100%,420px);margin-left:auto;margin-right:auto}
   .film-frame{aspect-ratio:9/16}
 }
+
+/* ---------- 2 Nov round: name, nav beta, next-on-air, stations strip, stove ---------- */
+.brand-w{text-transform:uppercase}
+.foot .big{text-transform:uppercase}
+.nav-right{justify-self:end;display:flex;align-items:center;gap:clamp(14px,2vw,28px)}
+.nav-right .nav-status{justify-self:auto}
+.nav-beta{border:1.5px solid var(--ink);border-radius:999px;padding:8px 14px 7px;background:var(--y);white-space:nowrap;transition:background .15s}
+.nav-beta:hover,.nav-beta:focus-visible{background:var(--ink);color:var(--paper)}
+.hero-notes{display:flex;flex-direction:column;gap:8px}
+.next-air{display:none;text-decoration:underline;text-underline-offset:3px}
+body[data-state="off"] .next-air,body[data-state="unknown"] .next-air{display:inline}
+/* stations: /matt stays put, the strip scrolls */
+.st .row.f{gap:clamp(12px,2vw,28px)}
+.st-lock{display:flex;align-items:center;gap:clamp(12px,2vw,28px);flex:none}
+.st-strip{flex:1;min-width:0;display:flex;gap:clamp(18px,2.6vw,40px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 48px),transparent)}
+.st-strip::-webkit-scrollbar{display:none}
+.st-strip .nm{flex:none;scroll-snap-align:start;color:transparent;-webkit-text-stroke:1.5px var(--grey);padding-left:4px}
+.st-strip .nm.on{color:var(--ink);-webkit-text-stroke:0}
+.st-strip:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.st .row.f .pl{flex:none}
+/* pocket: get it first */
+.pk-first{display:inline-block;margin-top:22px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
+.pk-first:hover{background:var(--y)}
+/* beta label room */
+.beta{padding-top:96px;position:relative}
+/* on the stove */
+.stove{padding:110px var(--pad) 60px}
+.stove-list{list-style:none;margin:0;padding:0}
+.stove-list li{display:grid;grid-template-columns:clamp(96px,10vw,140px) 1fr;gap:clamp(14px,2vw,28px);align-items:baseline;border-top:1.5px solid var(--ink);padding:16px 0 14px;font-weight:700;font-size:clamp(20px,2.2vw,32px);letter-spacing:-.03em;line-height:1.15}
+.stove-list li:last-child{border-bottom:1.5px solid var(--ink)}
+.stove-list .num{font-weight:500;font-size:clamp(14px,1.2vw,17px);letter-spacing:.02em;color:var(--mute)}
+.stove-list li.soon .num{color:var(--ink)}
+.stove-list li.soon .num::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--y);border:1.5px solid var(--ink);margin-right:8px;vertical-align:1px}
+@media (max-width:640px){
+  .nav-beta{padding:6px 10px 5px}
+  .nav-right .nav-status [data-status-word]{display:none}
+  .st .row.f{flex-wrap:wrap;padding:14px 0}
+  .st-lock{order:1}
+  .st .row.f .pl{order:2;margin-left:auto}
+  .st-strip{order:3;flex:0 0 100%}
+  .st-strip .nm{font-size:clamp(36px,11vw,56px)}
+  .stove-list li{grid-template-columns:1fr;gap:4px}
+}

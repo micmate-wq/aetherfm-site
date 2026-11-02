@@ -1,4 +1,4 @@
-/* AETHER FM · v0 · no frameworks.
+/* Aether · v0 · no frameworks.
    Stream + status come from the public Icecast behind dontpanic.fm (/listen/ is proxied over https, CORS open).
    Nothing here is faked: if /matt is not broadcasting the page says OFF AIR and the timer reads --:--:--. */
 (() => {
@@ -62,6 +62,7 @@
       const d = await r.json();
       let src = d.icestats && d.icestats.source; src = src ? (Array.isArray(src) ? src : [src]) : [];
       const s = src.find(x => (x.listenurl || '').split('/').pop() === MOUNT);   // present = a source is connected
+      document.dispatchEvent(new CustomEvent('aether:mounts', { detail: src.map(x => (x.listenurl || '').split('/').pop().toLowerCase()) }));
       if (s) {
         state = 'live';
         const t = Date.parse(s.stream_start_iso8601 || s.stream_start || '');

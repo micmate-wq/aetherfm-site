@@ -3,37 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AETHER FM</title>
+<title>Aether</title>
 <meta name="description" content="Something is on air. An instrument for sound. A radio you own.">
 <meta name="theme-color" content="#f1eee6">
 <link rel="icon" href="assets/favicon.svg?v=20260927-8" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AETHER FM">
+<meta property="og:title" content="Aether">
+<meta property="og:site_name" content="Aether">
 <meta property="og:description" content="Something is on air. An instrument for sound. A radio you own.">
 <link rel="canonical" href="https://aetherfm.xyz/">
 <meta property="og:url" content="https://aetherfm.xyz/">
-<meta property="og:image" content="https://aetherfm.xyz/assets/og.png">
+<meta property="og:image" content="https://aetherfm.xyz/assets/og.png?v=20261102-6">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/InterTight-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261102-5">
+<link rel="stylesheet" href="css/site.css?v=20261102-6">
 <link rel="stylesheet" href="css/poster-sheen.css">
 </head>
 <body data-state="checking">
 
 <nav class="nav">
-  <a class="brand" href="#top"><img src="assets/aether-mark-128.png?v=20260927-8" alt="" width="48" height="48">AETHER FM</a>
+  <a class="brand" href="#top"><img src="assets/aether-mark-128.png?v=20260927-8" alt="" width="48" height="48"><span class="brand-w">Aether</span></a>
   <span class="lab mute nav-mid">aetherfm.xyz</span>
-  <span class="lab nav-status"><span class="ld" aria-hidden="true"></span><span data-status-word>Tuning</span></span>
+  <span class="nav-right">
+    <span class="lab nav-status"><span class="ld" aria-hidden="true"></span><span data-status-word>Tuning</span></span>
+    <a class="nav-beta lab" href="#beta">Aether beta</a>
+  </span>
 </nav>
 
 <main id="top">
 
 <!-- 01 · ON AIR -->
 <section class="hero" aria-label="On air">
+  <div class="sn lab">01 · On air</div>
   <div class="facewrap">
     <div class="sch" aria-hidden="true">
       <span class="hl hl1"></span><span class="hl hl2"></span>
@@ -48,7 +53,7 @@
       <span class="edge e4"><i></i> <span data-mount-label>/matt</span></span>
     </div>
     <div class="face">
-      <div class="lab f-top">Aether FM · <span data-mount-label>/matt</span></div>
+      <div class="lab f-top">Aether · <span data-mount-label>/matt</span></div>
       <h1 class="f-word" data-word>ON AIR</h1>
       <div class="f-rule r1"></div>
       <div class="f-np marquee" aria-hidden="true"><div class="mq-track" data-marquee></div></div>
@@ -62,7 +67,8 @@
   </div>
   <p class="sr-only" aria-live="polite" data-np-live></p>
   <div class="hero-foot">
-    <span class="lab mute" data-note>Checking the air…</span>
+    <span class="hero-notes"><span class="lab mute" data-note>Checking the air…</span><a class="lab next-air" href="#film" data-next-air>Meanwhile → watch the film</a></span>
+    <noscript><span class="lab mute">No JavaScript, no status. Listen direct: dontpanic.fm/listen/matt</span></noscript>
     <span class="lab" data-listen-label>
       <svg class="i-mini" viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0 10 6 0 12z"/></svg>
       <span data-listen-text>Listen · 24/7</span>
@@ -73,13 +79,13 @@
 <!-- 02 · THREE LINES -->
 <section class="lines" aria-label="About">
   <canvas class="dots" data-dots aria-hidden="true"></canvas>
-  <div class="sn lab">02</div>
+  <div class="sn lab">02 · Aether</div>
   <p class="three"><span>An instrument for sound.</span><span>A radio you own.</span><span>Coming to Android.</span></p>
-  <figure class="film" data-film>
+  <figure class="film" id="film" data-film>
     <div class="film-frame">
-      <video muted playsinline loop preload="none" poster="assets/film/aether-film-16x9.jpg?v=20261102-5"
-        data-src-wide="assets/film/aether-film-16x9.mp4?v=20261102-5" data-src-tall="assets/film/aether-film-9x16.mp4?v=20261102-5"
-        data-poster-tall="assets/film/aether-film-9x16.jpg?v=20261102-5" aria-label="Aether, a 30-second film: Seed and Pocket"></video>
+      <video muted playsinline loop preload="none" poster="assets/film/aether-film-16x9.jpg?v=20261102-6"
+        data-src-wide="assets/film/aether-film-16x9.mp4?v=20261102-6" data-src-tall="assets/film/aether-film-9x16.mp4?v=20261102-6"
+        data-poster-tall="assets/film/aether-film-9x16.jpg?v=20261102-6" aria-label="Aether, a 30-second film: Seed and Pocket"></video>
       <button class="film-play" type="button" data-film-play aria-label="Play the film">
         <svg viewBox="0 0 40 46" aria-hidden="true"><path d="M0 0 40 23 0 46z"/></svg>
       </button>
@@ -93,7 +99,7 @@
 
 <!-- 03 · AETHERNODES -->
 <section class="nodes" aria-labelledby="nodes-h">
-  <div class="sn lab">03</div>
+  <div class="sn lab">03 · Nodes</div>
   <div class="nodes-head">
     <h2 id="nodes-h">AETHER<br>NODES</h2>
     <p class="lab mute">Small instruments.<br>Hover one. Listen.</p>
@@ -104,8 +110,8 @@
     <li class="tile p" style="--r:3deg;--dy:48px" data-clip=""><span class="lab k">AetherNode</span><span class="n">02</span><span class="rl"></span><span class="nm">BLOOM</span><span class="d">grows a pad</span></li>
     <li class="tile b" style="--r:-2deg;--dy:-10px" data-clip=""><span class="lab k">AetherNode</span><span class="n">03</span><span class="rl"></span><span class="nm">CROWD</span><span class="d">fills the room</span></li>
     <li class="tile t" style="--r:5deg;--dy:30px" data-clip=""><span class="lab k">AetherNode</span><span class="n">04</span><span class="rl"></span><span class="nm">GRANULAR</span><span class="d">sparkles</span></li>
-    <li class="tile o" style="--r:-3deg;--dy:-20px"><span class="lab k">Soon</span><span class="n">05</span><span class="rl"></span><span class="nm">—</span></li>
-    <li class="tile g" style="--r:2deg;--dy:40px"><span class="lab k">AetherNode</span><span class="n">??</span><span class="rl"></span><span class="nm">SOON</span><span class="d">something grows</span></li>
+    <li class="tile y" style="--r:-3deg;--dy:44px" data-clip=""><span class="lab k">AetherNode</span><span class="n">05</span><span class="rl"></span><span class="nm">PULSE</span><span class="d">warm bass</span></li>
+    <li class="tile g" style="--r:2deg;--dy:40px" data-clip=""><span class="lab k">AetherNode</span><span class="n">06</span><span class="rl"></span><span class="nm">BOWLS</span><span class="d">singing bowls</span></li>
     <li class="tile o" style="--r:4deg;--dy:0px"><span class="lab k">Soon</span><span class="n">07</span><span class="rl"></span><span class="nm">—</span></li>
     <li class="tile o" style="--r:-5deg;--dy:36px"><span class="lab k">Soon</span><span class="n">08</span><span class="rl"></span><span class="nm">—</span></li>
   </ul>
@@ -115,7 +121,10 @@
 <section class="st" aria-labelledby="st-h">
   <h2 class="sn lab" id="st-h">04 · Stations</h2>
   <div class="row f">
-    <span class="nm">/matt</span><span class="ld big" aria-hidden="true"></span><span class="lab" data-status-small>…</span>
+    <span class="st-lock"><span class="nm">/matt</span><span class="ld big" aria-hidden="true"></span><span class="lab" data-status-small>…</span></span>
+    <div class="st-strip" data-st-strip tabindex="0" aria-label="Other stations (swipe)">
+      <span class="nm" data-mount="40foxes">/40foxes</span><span class="nm" data-mount="maxx">/MAXX</span><span class="nm" aria-hidden="true">/…</span>
+    </div>
     <button class="pl" type="button" data-play aria-label="Play the /matt stream" aria-pressed="false">
       <svg class="i-play" viewBox="0 0 22 26" aria-hidden="true"><path d="M2 1 21 13 2 25z"/></svg>
       <svg class="i-pause" viewBox="0 0 22 26" aria-hidden="true"><rect x="3" y="2" width="6" height="22"/><rect x="13" y="2" width="6" height="22"/></svg>
@@ -136,18 +145,20 @@
       <li><button type="button" data-pk="1">Tune in to stations, yours or friends'.</button></li>
       <li><button type="button" data-pk="2">Record takes on your phone. They sync to Seed.</button></li>
     </ol>
+    <a class="pk-first lab" href="#beta">Get it first → Aether beta</a>
   </div>
   <figure class="phone" aria-label="Aether Pocket screens">
     <div class="scr">
-      <img src="assets/pocket/pocket-1.webp?v=20261102-4" alt="Pocket on an Android phone, connected to Aether: four track discs to drag for level and pan" width="412" height="893" loading="lazy" class="on">
-      <img src="assets/pocket/pocket-2.webp?v=20261102-4" alt="Pocket Tune in sheet listing stations" width="412" height="893" loading="lazy">
-      <img src="assets/pocket/pocket-3.webp?v=20261102-4" alt="Pocket on an Android phone: the phone recorder and mixer" width="412" height="893" loading="lazy">
+      <img src="assets/pocket/pocket-1.webp?v=20261102-6" alt="Pocket on an Android phone, connected to Aether: four track discs to drag for level and pan" width="412" height="893" loading="lazy" class="on">
+      <img src="assets/pocket/pocket-2.webp?v=20261102-6" alt="Pocket Tune in sheet listing stations" width="412" height="893" loading="lazy">
+      <img src="assets/pocket/pocket-3.webp?v=20261102-6" alt="Pocket on an Android phone: the phone recorder and mixer" width="412" height="893" loading="lazy">
     </div>
   </figure>
 </section>
 
 <!-- 06 · TUNE IN EARLY · beta sign-up via Formspree (free plan, form xrppoadj → matt@aetherfm.xyz) -->
 <section class="beta" id="beta" aria-labelledby="beta-h">
+  <div class="sn lab">06 · Beta</div>
   <p class="h" id="beta-h">Tune in early.</p>
   <details class="bd" data-beta-d>
   <summary class="field"><span>Aether beta</span><span class="go"><span class="lab mute">sign up</span><span class="arr" aria-hidden="true">→</span></span></summary>
@@ -167,25 +178,29 @@
   </details>
 </section>
 
+<!-- 07 · ON THE STOVE · light news, edited in data/stove.json -->
+<section class="stove" aria-labelledby="stove-h" data-stove hidden>
+  <h2 class="sn lab" id="stove-h">07 · On the stove</h2>
+  <ul class="stove-list" data-stove-list></ul>
+</section>
+
 </main>
 
 <footer class="foot">
   <div class="cols">
-    <div class="log"><h3 class="lab">Log</h3>
-      <p><span class="num">27.09.26</span><span>site marked</span></p>
-      <p><span class="num">26.09.26</span><span>aetherfm.xyz found</span></p>
-      <p class="mute"><span class="num">—.—.—</span><span>next</span></p>
-    </div>
-    <div><h3 class="lab">Contact</h3><p><a href="mailto:mic.mate@gmail.com">mic.mate@gmail.com</a></p><p class="mute">or find /matt on air</p></div>
+    <div><h3 class="lab">Beta</h3><p><a href="#beta">Aether beta → sign up</a></p><p class="mute">Android first</p></div>
+    <div><h3 class="lab">Contact</h3><p><a href="mailto:matt@aetherfm.xyz">matt@aetherfm.xyz</a></p><p class="mute">or find /matt on air</p></div>
     <div class="right"><h3 class="lab">Aether</h3><p>an instrument, a radio</p><p class="mute">© 2026</p></div>
   </div>
-  <div class="big" aria-hidden="true">AETHER FM</div>
+  <div class="big" aria-hidden="true">Aether</div>
 </footer>
 
 <audio data-audio preload="none"></audio>
-<script src="js/site.js?v=20261102-4" defer></script>
-<script src="js/beta.js?v=20261102-4" defer></script>
-<script src="js/pocket.js?v=20261102-4" defer></script>
-<script src="js/film.js?v=20261102-5" defer></script>
+<script src="js/site.js?v=20261102-6" defer></script>
+<script src="js/beta.js?v=20261102-6" defer></script>
+<script src="js/pocket.js?v=20261102-6" defer></script>
+<script src="js/film.js?v=20261102-6" defer></script>
+<script src="js/stove.js?v=20261102-6" defer></script>
+<script src="js/stations.js?v=20261102-6" defer></script>
 </body>
 </html>
