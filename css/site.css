@@ -83,7 +83,7 @@ body.playing .i-mini{fill:var(--r)}
 .tile.g{background-color:#8fd19e;background-color:var(--g)}.tile.t{background:none;border:0}.tile.y{background:var(--y)}.tile.p{background:var(--p)}.tile.b{background:var(--b)}
 .tile.o{border:1.5px dashed var(--ink)}
 .tile > *{position:absolute;left:0;right:0;text-align:center}
-.tile .k{top:16cqw;font-size:max(8px,4cqw)}
+.tile .k{top:16cqw;font-size:max(11px,5cqw);letter-spacing:.18em}
 .tile .n{top:26.4cqw;font-weight:900;font-size:36.8cqw;letter-spacing:-.07em;line-height:.8}
 .tile.o .n{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
 .tile .rl{left:16cqw;right:16cqw;top:57.6cqw;border-top:1.5px solid var(--ink);transform:rotate(-3deg)}
@@ -136,7 +136,8 @@ body.playing .i-mini{fill:var(--r)}
   .three{top:18%}
   .nodes{padding-top:90px}
   .wall{grid-template-columns:repeat(2,1fr);gap:22px}
-  .tile .k{font-size:max(7px,4cqw)}
+  .tile .k{font-size:max(11px,6.4cqw);letter-spacing:.14em}
+  .wall li:nth-child(5){--dy:0px!important}
   .foot .cols{grid-template-columns:1fr 1fr}
   .foot .right{display:none}
   .foot{height:340px}
