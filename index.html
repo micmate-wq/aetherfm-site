@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/InterTight-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261102-4">
+<link rel="stylesheet" href="css/site.css?v=20261102-5">
 <link rel="stylesheet" href="css/poster-sheen.css">
 </head>
 <body data-state="checking">
@@ -75,6 +75,20 @@
   <canvas class="dots" data-dots aria-hidden="true"></canvas>
   <div class="sn lab">02</div>
   <p class="three"><span>An instrument for sound.</span><span>A radio you own.</span><span>Coming to Android.</span></p>
+  <figure class="film" data-film>
+    <div class="film-frame">
+      <video muted playsinline loop preload="none" poster="assets/film/aether-film-16x9.jpg?v=20261102-5"
+        data-src-wide="assets/film/aether-film-16x9.mp4?v=20261102-5" data-src-tall="assets/film/aether-film-9x16.mp4?v=20261102-5"
+        data-poster-tall="assets/film/aether-film-9x16.jpg?v=20261102-5" aria-label="Aether, a 30-second film: Seed and Pocket"></video>
+      <button class="film-play" type="button" data-film-play aria-label="Play the film">
+        <svg viewBox="0 0 40 46" aria-hidden="true"><path d="M0 0 40 23 0 46z"/></svg>
+      </button>
+    </div>
+    <figcaption class="film-cap">
+      <span class="lab">Film · 00:30 · Seed &amp; Pocket</span>
+      <button class="film-snd lab" type="button" data-film-sound aria-pressed="false"><span class="ld" aria-hidden="true"></span><span data-film-sound-label>Sound off</span></button>
+    </figcaption>
+  </figure>
 </section>
 
 <!-- 03 · AETHERNODES -->
@@ -172,5 +186,6 @@
 <script src="js/site.js?v=20261102-4" defer></script>
 <script src="js/beta.js?v=20261102-4" defer></script>
 <script src="js/pocket.js?v=20261102-4" defer></script>
+<script src="js/film.js?v=20261102-5" defer></script>
 </body>
 </html>
