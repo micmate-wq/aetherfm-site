@@ -102,7 +102,7 @@ body.playing .i-mini{fill:var(--r)}
 .pl:hover{background:var(--y)}
 
 /* ---------- beta ---------- */
-.beta{min-height:230px;padding:40px var(--pad);display:flex;align-items:center;gap:clamp(20px,2.8vw,40px);flex-wrap:wrap}
+.beta{min-height:0;padding:40px var(--pad);display:flex;align-items:center;gap:clamp(20px,2.8vw,40px);flex-wrap:wrap}
 .beta .h{font-weight:900;font-size:clamp(40px,4.4vw,64px);letter-spacing:-.055em;line-height:1}
 .beta .field{flex:1;min-width:240px;border-bottom:2px solid var(--grey);height:56px;display:flex;align-items:center;justify-content:space-between;font-weight:500;font-size:clamp(15px,1.4vw,20px);color:var(--mute);cursor:not-allowed}
 .beta .arr{color:var(--grey);font-weight:900;font-size:30px}
@@ -149,12 +149,11 @@ body.playing .i-mini{fill:var(--r)}
 
 /* ---------- beta form ---------- */
 .beta{align-items:flex-start}
-.bform{flex:1;min-width:min(100%,520px);display:grid;gap:18px}
-.brow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.bform{flex:1;min-width:min(100%,480px);max-width:760px;display:grid;gap:16px}
+.brow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .bf{display:grid;gap:6px}
 .bf input,.bf select,.bf textarea{font:inherit;font-weight:500;font-size:clamp(16px,1.4vw,20px);color:var(--ink);background:transparent;border:0;border-bottom:2px solid var(--grey);border-radius:0;padding:8px 0;width:100%;-webkit-appearance:none;appearance:none}
 .bf textarea{resize:vertical;min-height:48px}
-.bf select{cursor:pointer;background:linear-gradient(45deg,transparent 50%,var(--mute) 50%) right 6px center/7px 7px no-repeat}
 .bf input:focus,.bf select:focus,.bf textarea:focus{outline:none;border-bottom-color:var(--ink)}
 .bf :user-invalid{border-bottom-color:var(--r)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
@@ -165,7 +164,7 @@ body.playing .i-mini{fill:var(--r)}
 .bsend .arr{color:var(--y);font-size:24px}
 .bsend:disabled{opacity:.5;cursor:wait}
 .bmsg:empty{display:none}
-.bform[data-done] .brow,.bform[data-done] .wide,.bform[data-done] .bfoot{display:none}
+.bform[data-done] .brow,.bform[data-done] .brow~.bf,.bform[data-done] .bfoot{display:none}
 .bform[data-done] .bmsg{font-size:clamp(18px,1.8vw,26px);text-transform:none;letter-spacing:-.02em;font-weight:700;color:var(--ink)}
 @media (max-width:720px){.brow{grid-template-columns:1fr}.bsend{width:100%;justify-content:space-between}}
 

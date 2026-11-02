@@ -18,7 +18,7 @@
       f.setAttribute('data-done', '');
       msg.textContent = "You're on the list. We'll be in touch when the beta opens.";
     } catch {
-      msg.textContent = "That didn't send. Please try again, or email mic.mate@gmail.com.";
+      msg.textContent = "That didn't send. Please try again, or email matt@aetherfm.xyz.";
     } finally { btn.disabled = false; }
   });
 })();

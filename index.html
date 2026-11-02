@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/InterTight-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261102-1">
+<link rel="stylesheet" href="css/site.css?v=20261102-2">
 <link rel="stylesheet" href="css/poster-sheen.css">
 </head>
 <body data-state="checking">
@@ -119,17 +119,15 @@
     <p class="lab mute pk-soon"><img src="assets/pocket/pocket-mark.svg" alt="" width="22" height="22">Coming to Android</p>
     <ol class="pk-caps">
       <li><button type="button" data-pk="0" aria-current="true">Mix the four tracks by dragging the discs.</button></li>
-      <li><button type="button" data-pk="1">Hold to drop your voice into the set.</button></li>
-      <li><button type="button" data-pk="2">Tune in to stations, yours or friends'.</button></li>
-      <li><button type="button" data-pk="3">Record takes on your phone. They sync to Seed.</button></li>
+      <li><button type="button" data-pk="1">Tune in to stations, yours or friends'.</button></li>
+      <li><button type="button" data-pk="2">Record takes on your phone. They sync to Seed.</button></li>
     </ol>
   </div>
   <figure class="phone" aria-label="Aether Pocket screens">
     <div class="scr">
-      <img src="assets/pocket/pocket-1.webp?v=20261102-1" alt="Pocket on an Android phone, connected to Aether: four track discs to drag for level and pan" width="412" height="893" loading="lazy" class="on">
-      <img src="assets/pocket/pocket-2.webp?v=20261102-1" alt="Pocket play controls, hold-to-drop button and the Matt's room tuner" width="412" height="893" loading="lazy">
-      <img src="assets/pocket/pocket-3.webp?v=20261102-1" alt="Pocket Tune in sheet listing stations" width="412" height="893" loading="lazy">
-      <img src="assets/pocket/pocket-4.webp?v=20261102-1" alt="Pocket on an Android phone: the phone recorder and mixer" width="412" height="893" loading="lazy">
+      <img src="assets/pocket/pocket-1.webp?v=20261102-2" alt="Pocket on an Android phone, connected to Aether: four track discs to drag for level and pan" width="412" height="893" loading="lazy" class="on">
+      <img src="assets/pocket/pocket-2.webp?v=20261102-2" alt="Pocket Tune in sheet listing stations" width="412" height="893" loading="lazy">
+      <img src="assets/pocket/pocket-3.webp?v=20261102-2" alt="Pocket on an Android phone: the phone recorder and mixer" width="412" height="893" loading="lazy">
     </div>
   </figure>
 </section>
@@ -140,18 +138,13 @@
   <form class="bform" data-beta data-form-id="" method="POST" action="https://formspree.io/f/" novalidate>
     <div class="brow">
       <label class="bf"><span class="lab">Name</span><input name="name" type="text" autocomplete="name" required maxlength="80"></label>
-      <label class="bf"><span class="lab">Email</span><input name="email" type="email" autocomplete="email" required maxlength="120"></label>
-      <label class="bf"><span class="lab">Device</span>
-        <select name="device" required>
-          <option value="" selected disabled>Choose…</option>
-          <option>Android phone</option><option>iPhone</option><option>Mac / PC / Linux</option><option>Other</option>
-        </select></label>
+      <label class="bf"><span class="lab">Email <span class="mute">(so Matt can reply)</span></span><input name="email" type="email" autocomplete="email" required maxlength="120"></label>
     </div>
-    <label class="bf wide"><span class="lab">Message <span class="mute">(optional)</span></span><textarea name="message" rows="2" maxlength="1000"></textarea></label>
+    <label class="bf"><span class="lab">Message</span><textarea name="message" rows="2" required maxlength="1000" placeholder="Your setup: phone, laptop, what you play…"></textarea></label>
     <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <input type="hidden" name="_subject" value="Aether beta sign-up">
     <div class="bfoot">
-      <p class="lab mute priv">We keep your name, email and device so we can invite you to the Aether beta, and we use them for nothing else. Formspree emails them to Matt. They're never sold or shared. To be removed, write to <a href="mailto:mic.mate@gmail.com">mic.mate@gmail.com</a>.</p>
+      <p class="lab mute priv">Your name, email and message go to Matt (via Formspree) so he can invite you to the Aether beta. They aren't used for anything else, sold or shared. To be removed, write to <a href="mailto:matt@aetherfm.xyz">matt@aetherfm.xyz</a>.</p>
       <button class="bsend" type="submit">Join the beta <span class="arr" aria-hidden="true">→</span></button>
     </div>
     <p class="lab bmsg" data-beta-msg role="status" aria-live="polite"></p>
@@ -174,8 +167,8 @@
 </footer>
 
 <audio data-audio preload="none"></audio>
-<script src="js/site.js?v=20261102-1" defer></script>
-<script src="js/beta.js?v=20261102-1" defer></script>
-<script src="js/pocket.js?v=20261102-1" defer></script>
+<script src="js/site.js?v=20261102-2" defer></script>
+<script src="js/beta.js?v=20261102-2" defer></script>
+<script src="js/pocket.js?v=20261102-2" defer></script>
 </body>
 </html>
