@@ -50,3 +50,10 @@ The site is fully static, so any host works. Stream and status are fetched cross
 
 ## Cache-busting
 GitHub Pages serves files with `cache-control: max-age=600`, so browsers can pair a new `index.html` with an old cached `site.css`. `index.html` loads CSS, JS and images with a `?v=` query (for example `css/site.css?v=20260927-8`). **Bump that value in `index.html` every time CSS, JS or images change.**
+
+## Motion (2 Nov)
+- `js/vendor/lenis-1.3.26.min.js` is Lenis (MIT, see `LENIS-LICENSE.txt`), vendored so the site still uses no CDN. Smooth wheel only; touch devices keep native scrolling.
+- `js/motion.js` adds three things. Reduced motion turns all of them off.
+  - Lenis.
+  - The "pop": `.face`, `.film-frame` and `.phone` scale up about 2.6% and gain shadow as they reach mid-screen (CSS `--pop`, using `scale`/`translate` so existing rotations are kept).
+  - A light pull: when a wheel scroll stops within 14% of a viewport of a section top, it eases onto it in 0.7s. This doesn't run on touch devices.

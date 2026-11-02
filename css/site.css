@@ -260,3 +260,16 @@ body[data-state="off"] .next-air,body[data-state="unknown"] .next-air{display:in
   .st-strip .nm{font-size:clamp(36px,11vw,56px)}
   .stove-list li{grid-template-columns:1fr;gap:4px}
 }
+
+/* ---------- motion layer (js/motion.js + Lenis) ---------- */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis [data-lenis-prevent],.lenis [data-lenis-prevent-wheel]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:clip}
+/* pop: --pop (0..1) is set while an element nears mid-screen; scale/translate stack on top of any rotate */
+.pop{scale:calc(1 + .026 * var(--pop,0));translate:0 calc(-6px * var(--pop,0));will-change:scale,translate}
+.face.pop{box-shadow:calc(9px + 7px * var(--pop,0)) calc(13px + 15px * var(--pop,0)) calc(24px + 24px * var(--pop,0)) rgba(20,20,20,calc(.16 + .1 * var(--pop,0)))}
+.film-frame.pop{box-shadow:calc(9px + 7px * var(--pop,0)) calc(13px + 15px * var(--pop,0)) calc(24px + 24px * var(--pop,0)) rgba(20,20,20,calc(.16 + .1 * var(--pop,0)))}
+.phone.pop{box-shadow:0 calc(30px + 18px * var(--pop,0)) calc(60px + 26px * var(--pop,0)) -30px rgba(20,20,20,calc(.45 + .12 * var(--pop,0)))}
+@media (max-width:640px){.face.pop{box-shadow:calc(5px + 5px * var(--pop,0)) calc(8px + 10px * var(--pop,0)) calc(14px + 16px * var(--pop,0)) rgba(20,20,20,calc(.15 + .08 * var(--pop,0)))}}
+@media (prefers-reduced-motion:reduce){.pop{scale:none;translate:none}}
