@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/InterTight-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20260927-8">
+<link rel="stylesheet" href="css/site.css?v=20261102-1">
 <link rel="stylesheet" href="css/poster-sheen.css">
 </head>
 <body data-state="checking">
@@ -111,11 +111,28 @@
   <div class="row g"><span class="nm">/—</span><span class="lab mute">open</span></div>
 </section>
 
-<!-- 05 · TUNE IN EARLY (placeholder, collects nothing) -->
-<section class="beta" aria-label="Android beta">
-  <p class="h">Tune in early.</p>
-  <div class="field" aria-disabled="true"><span>Android beta · sign-up opens soon</span><span class="arr" aria-hidden="true">→</span></div>
-  <span class="lab mute">soon</span>
+<!-- 05 · TUNE IN EARLY · beta sign-up via Formspree (set data-form-id to go live) -->
+<section class="beta" aria-labelledby="beta-h">
+  <p class="h" id="beta-h">Tune in early.</p>
+  <form class="bform" data-beta data-form-id="" method="POST" action="https://formspree.io/f/" novalidate>
+    <div class="brow">
+      <label class="bf"><span class="lab">Name</span><input name="name" type="text" autocomplete="name" required maxlength="80"></label>
+      <label class="bf"><span class="lab">Email</span><input name="email" type="email" autocomplete="email" required maxlength="120"></label>
+      <label class="bf"><span class="lab">Device</span>
+        <select name="device" required>
+          <option value="" selected disabled>Choose…</option>
+          <option>Android phone</option><option>iPhone</option><option>Mac / PC / Linux</option><option>Other</option>
+        </select></label>
+    </div>
+    <label class="bf wide"><span class="lab">Message <span class="mute">(optional)</span></span><textarea name="message" rows="2" maxlength="1000"></textarea></label>
+    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="_subject" value="Aether beta sign-up">
+    <div class="bfoot">
+      <p class="lab mute priv">We keep your name, email and device so we can invite you to the Aether beta, and we use them for nothing else. Formspree emails them to Matt. They're never sold or shared. To be removed, write to <a href="mailto:mic.mate@gmail.com">mic.mate@gmail.com</a>.</p>
+      <button class="bsend" type="submit">Join the beta <span class="arr" aria-hidden="true">→</span></button>
+    </div>
+    <p class="lab bmsg" data-beta-msg role="status" aria-live="polite"></p>
+  </form>
 </section>
 
 </main>
@@ -134,6 +151,7 @@
 </footer>
 
 <audio data-audio preload="none"></audio>
-<script src="js/site.js?v=20260927-8" defer></script>
+<script src="js/site.js?v=20261102-1" defer></script>
+<script src="js/beta.js?v=20261102-1" defer></script>
 </body>
 </html>
