@@ -1,4 +1,4 @@
-// Beta sign-up: posts to Formspree. Set data-form-id on the form to go live.
+// Beta sign-up: AJAX post to Formspree (free plan, form xrppoadj → matt@aetherfm.xyz), inline thank-you.
 (() => {
   const f = document.querySelector('[data-beta]');
   if (!f) return;
