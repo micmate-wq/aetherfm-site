@@ -168,3 +168,17 @@ body.playing .i-mini{fill:var(--r)}
 .bform[data-done] .brow,.bform[data-done] .wide,.bform[data-done] .bfoot{display:none}
 .bform[data-done] .bmsg{font-size:clamp(18px,1.8vw,26px);text-transform:none;letter-spacing:-.02em;font-weight:700;color:var(--ink)}
 @media (max-width:720px){.brow{grid-template-columns:1fr}.bsend{width:100%;justify-content:space-between}}
+
+/* ---------- pocket preview ---------- */
+.pocket{padding:clamp(48px,7vw,110px) var(--pad);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(28px,6vw,96px);align-items:center;border-top:2px solid var(--ink)}
+.pk-h{font-weight:900;font-size:clamp(44px,6vw,96px);letter-spacing:-.055em;line-height:.95;margin:18px 0 12px}
+.pk-caps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:4px;counter-reset:pk}
+.pk-caps button{font:inherit;font-weight:600;font-size:clamp(16px,1.5vw,21px);letter-spacing:-.02em;text-align:left;color:var(--mute);background:none;border:0;border-left:3px solid var(--grey);padding:8px 0 8px 14px;cursor:pointer;width:100%;transition:color .3s,border-color .3s}
+.pk-caps button[aria-current="true"]{color:var(--ink);border-left-color:var(--p)}
+.phone{margin:0;width:clamp(220px,24vw,300px);aspect-ratio:412/893;border:10px solid var(--ink);border-radius:38px;overflow:hidden;background:var(--paper);box-shadow:0 30px 60px -30px rgba(20,20,20,.45);transform:rotate(2deg)}
+.scr{position:relative;width:100%;height:100%}
+.scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease;transform:translateY(0)}
+.scr img.on{opacity:1;animation:pk-drift 3.6s ease-out both}
+@keyframes pk-drift{from{transform:scale(1.012) translateY(.6%)}to{transform:scale(1) translateY(0)}}
+@media (prefers-reduced-motion:reduce){.scr img{transition:none}.scr img.on{animation:none}}
+@media (max-width:720px){.pocket{grid-template-columns:1fr;justify-items:center}.pk-copy{width:100%}.phone{width:min(72vw,280px);transform:none}}
