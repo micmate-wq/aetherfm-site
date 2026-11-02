@@ -182,3 +182,17 @@ body.playing .i-mini{fill:var(--r)}
 @media (prefers-reduced-motion:reduce){.scr img{transition:none}.scr img.on{animation:none}}
 @media (max-width:720px){.pocket{grid-template-columns:1fr;justify-items:center}.pk-copy{width:100%}.phone{width:min(72vw,280px);transform:none}}
 .pk-soon{display:flex;align-items:center;gap:10px}.pk-soon img{border-radius:6px}
+
+/* beta entry: the original field line opens the form */
+.bd{flex:1;min-width:min(100%,480px);max-width:760px}
+.beta .bd>summary{list-style:none;cursor:pointer;color:var(--ink)}
+.bd>summary::-webkit-details-marker{display:none}
+.bd>summary .go{display:flex;align-items:center;gap:14px}
+.bd>summary .arr{color:var(--ink);transition:transform .25s ease}
+.bd>summary:hover,.bd>summary:focus-visible{border-bottom-color:var(--ink);outline:none}
+.bd>summary:hover .arr{transform:translateX(4px)}
+.bd[open]>summary{border-bottom-color:var(--ink)}
+.bd[open]>summary .arr{transform:rotate(90deg)}
+.bd[open]>summary .go .lab{visibility:hidden}
+.bd .bform{max-width:none;margin-top:22px;min-width:0}
+@media (prefers-reduced-motion:reduce){.bd>summary .arr{transition:none}}

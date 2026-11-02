@@ -5,6 +5,11 @@
   const msg = f.querySelector('[data-beta-msg]');
   const btn = f.querySelector('.bsend');
   const id = (f.dataset.formId || '').trim();
+  const d = f.closest('[data-beta-d]');
+  // #beta links open the form
+  const openFromHash = () => { if (d && location.hash === '#beta') { d.open = true; } };
+  openFromHash(); addEventListener('hashchange', openFromHash);
+  if (d) d.addEventListener('toggle', () => { if (d.open && !f.hasAttribute('data-done')) setTimeout(() => f.name.focus({ preventScroll: true }), 50); });
   if (id) f.action = 'https://formspree.io/f/' + id;
 
   f.addEventListener('submit', async (e) => {
